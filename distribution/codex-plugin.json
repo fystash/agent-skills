@@ -1,0 +1,13 @@
+{
+  "name": "fystash-agent-skills",
+  "version": "0.5.0",
+  "description": "Distribution metadata for packaging fystash/agent-skills as an OpenAI/Codex plugin in W8-9. Skill bodies are not duplicated here.",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/fystash/agent-skills",
+  "skills": [
+    { "name": "fystash", "path": "../fystash" },
+    { "name": "fystash-cli", "path": "../fystash-cli" },
+    { "name": "fystash-debug", "path": "../fystash-debug" },
+    { "name": "fystash-integrations", "path": "../fystash-integrations" }
+  ]
+}
