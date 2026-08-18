@@ -10,8 +10,8 @@ The Go CLI remains the execution surface (`fystash skills install`).
 | Skill | Use when |
 |---|---|
 | [`fystash`](fystash/SKILL.md) | Authoring `sandbox.yaml`, choosing Components/State, SDK usage, core lifecycle |
-| [`fystash-cli`](fystash-cli/SKILL.md) | login, connect, compile, Plan/apply, wait, exec, Evidence |
-| [`fystash-debug`](fystash-debug/SKILL.md) | CLI/API/MCP failures, using canonical error codes |
+| [`fystash-cli`](fystash-cli/SKILL.md) | login, connect, compile, Plan/apply, wait, exec, Evidence, feedback |
+| [`fystash-debug`](fystash-debug/SKILL.md) | CLI/API/MCP failures, using canonical error codes, filing Fystash-side feedback |
 | [`fystash-integrations`](fystash-integrations/SKILL.md) | ToolGateway, ModelGateway, managed Data, brokered credentials |
 
 ## Install

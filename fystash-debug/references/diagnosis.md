@@ -11,6 +11,8 @@ fystash evidence list --resourceKind Run --resourceId run_... --json
 
 5. Retry only when `retryable` is true. Auth, policy, and schema errors are not retryable.
 
+6. If the defect is Fystash-side (not the caller's workload), `fystash feedback --json` then continue with a workaround. See the fystash-cli Feedback section.
+
 | Symptom | Start here |
 |---|---|
 | 401 / login / token | [auth-errors.md](auth-errors.md) |

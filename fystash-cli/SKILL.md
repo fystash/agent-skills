@@ -2,9 +2,9 @@
 name: fystash-cli
 description: >-
   Operates the canonical Go Fystash CLI for authentication, Project connect,
-  sandbox compile, Plan/apply, sandbox start/exec/evidence/stop, run wait/exec, and Evidence. Use when the
-  user needs fystash login, connect, current, compile, sandbox start, plan, apply, wait, exec,
-  evidence, batch, publication, or machine-mode --json behavior.
+  sandbox compile, Plan/apply, sandbox start/exec/evidence/stop, run wait/exec, Evidence, and
+  fystash feedback. Use when the user needs fystash login, connect, current, compile, sandbox start, plan, apply, wait, exec,
+  evidence, batch, publication, feedback, or machine-mode --json behavior.
 ---
 
 # Fystash CLI
@@ -30,5 +30,12 @@ Exit codes: `0` success, `1` operation/runtime failure, `2` usage.
 - Evidence: [references/evidence.md](references/evidence.md)
 - Batch: [references/batch.md](references/batch.md)
 - Publication / release: [references/release.md](references/release.md)
+- Feedback: [references/feedback.md](references/feedback.md)
 
 Global flags (same meaning on every command): `--json` `--project` `--api-url` `--profile` `--timeout` `--correlation-id` `--no-color`.
+
+## Feedback
+
+When you hit a hurdle that is Fystash's fault — something that should work but doesn't, a capability you needed but isn't supported, instructions (docs/skill) that reality contradicts, or needless friction — report it with `fystash feedback`, then continue the user's task with a workaround. Never file feedback for problems in the user's own workload, `environment.yaml`, or app code.
+
+See [references/feedback.md](references/feedback.md).

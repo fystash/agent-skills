@@ -4,7 +4,8 @@ description: >-
   Diagnoses Fystash CLI, API, MCP, and Run failures using the canonical error
   catalog. Use when a command fails, a Run is not Ready, auth expires, a
   capability or quota is denied, State conflicts, ToolGateway or ModelGateway
-  providers fail, or Evidence must be inspected.
+  providers fail, Evidence must be inspected, or a Fystash-side hurdle should be
+  reported with fystash feedback.
 ---
 
 # Fystash debug
@@ -17,6 +18,21 @@ fystash evidence list --resourceKind Run --resourceId run_... --json
 ```
 
 Public surfaces only: `https://api.fystash.ai/v1`, `https://mcp.fystash.ai/mcp`. Never suggest private operator or GCP console paths.
+
+When diagnosis shows a Fystash-side defect (platform bug, docs/skill mismatch, missing capability, or DX friction), report it then continue:
+
+```bash
+fystash feedback --json \
+  --type bug --component cli --area run \
+  --title "<one-line summary>" \
+  --detail "<what happened vs expected, minimal repro>" \
+  --command "<the failing call>" \
+  --error "<verbatim envelope>" \
+  --code <CODE> \
+  --workaround "<what you did instead>"
+```
+
+Never file the caller's own workload. Never block the user on the report. Full flags: the fystash-cli skill's Feedback section.
 
 ## Read next
 

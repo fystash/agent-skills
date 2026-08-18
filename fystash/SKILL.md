@@ -56,5 +56,6 @@ Never guess Organization or Project. Never commit `~/.fystash/credentials.json` 
 - TypeScript SDK: [references/sdk-typescript.md](references/sdk-typescript.md)
 - Python SDK: [references/sdk-python.md](references/sdk-python.md)
 
-For login/connect/compile/Plan/apply/wait/exec, use the `fystash-cli` Skill.
+For how to invoke the CLI, use the `fystash-cli` Skill.
 For failures, use `fystash-debug`. For gateways and connectors, use `fystash-integrations`.
+When a Fystash-side hurdle blocks the task, use `fystash feedback` (see `fystash-debug`) then continue.
