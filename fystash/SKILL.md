@@ -1,27 +1,39 @@
 ---
 name: fystash
 description: >-
-  Teaches the Fystash product model — Environment, immutable Revision, Branch,
-  Run, Evidence — and how to author environment.yaml and choose Components and
-  State. Use when building an agent workload, writing or editing environment.yaml,
+  Teaches the Fystash product model — Sandbox, immutable Revision, Branch,
+  Run, Evidence — and how to author sandbox.yaml and choose Components and
+  State. Use when building an agent workload, writing or editing sandbox.yaml,
   selecting Compute/Service/Browser/Desktop/ToolGateway/ModelGateway/Data, or
   using the TypeScript or Python SDK against the public API.
 ---
 
 # Fystash
 
-Fystash is the agent environment platform. One catalog drives REST, CLI, MCP, and SDKs.
+Fystash is the agent-native sandbox platform. A Sandbox is composed from Components and State. One catalog drives REST, CLI, MCP, and SDKs.
+
+Public mental model:
+
+```text
+Fystash
+  ↓
+Sandbox
+  ├─ Components
+  └─ State
+```
 
 Canonical lifecycle:
 
 ```text
-environment.yaml
+sandbox.yaml (kind: Sandbox)
   → compile → immutable Revision
   → Branch (State head)
   → Plan (visible, digest-bound)
-  → apply → Run
+  → apply → Run  (a running Sandbox)
   → Evidence
 ```
+
+Do not invent `sbx_` IDs or a Sandbox control-plane resource.
 
 Public surfaces only:
 
@@ -37,6 +49,7 @@ Never guess Organization or Project. Never commit `~/.fystash/credentials.json` 
 - Core resources: [references/core-model.md](references/core-model.md)
 - Manifest grammar: [references/environment-yaml.md](references/environment-yaml.md)
 - Components: [references/components.md](references/components.md)
+- Guest images: [references/guest-images.md](references/guest-images.md)
 - State: [references/state.md](references/state.md)
 - Actors / coordination: [references/actors-coordination.md](references/actors-coordination.md)
 - Run lifecycle: [references/run-lifecycle.md](references/run-lifecycle.md)

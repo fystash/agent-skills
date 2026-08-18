@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "fystash": {
+      "type": "http",
+      "url": "https://mcp.fystash.ai/mcp"
+    }
+  }
+}

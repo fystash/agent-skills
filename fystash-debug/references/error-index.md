@@ -20,8 +20,13 @@ Default retryable: false. Typical HTTP: 400, 410, 422.
 | `MANIFEST_PARSE_FAILED` | The World manifest is not parseable YAML or JSON. |  |
 | `MANIFEST_API_VERSION_UNSUPPORTED` | The manifest declares an apiVersion group this deployment does not compile. |  |
 | `MANIFEST_SCHEMA_INVALID` | The manifest parses but does not satisfy the World schema. |  |
-| `MANIFEST_KIND_DEPRECATED` | The manifest uses the deprecated kind: World; use kind: Environment. | Change the manifest to apiVersion: environments.fystash.dev/v1alpha1 and kind: Environment. |
+| `MANIFEST_KIND_DEPRECATED` | The manifest uses a deprecated kind; use kind: Sandbox. | Change the manifest to apiVersion: sandboxes.fystash.dev/v1alpha1 and kind: Sandbox. |
+| `SANDBOX_TOPOLOGY_INVALID` | The Sandbox graph is not a valid topology: a dependency cycle, an unreachable Component or a missing private endpoint. |  |
+| `SANDBOX_REFERENCE_UNRESOLVED` | A reference in the Sandbox manifest names something that does not exist. |  |
+| `SANDBOX_REFERENCE_MUTABLE` | A reference is a mutable tag rather than a pinned digest. |  |
+| `SANDBOX_MODULE_EXPANSION_FAILED` | A Composition Module could not be expanded into the explicit graph. |  |
 | `ENVIRONMENT_TOPOLOGY_INVALID` | The Environment graph is not a valid topology: a dependency cycle, an unreachable Component or a missing private endpoint. |  |
+| `COMPONENT_RESOURCES_BELOW_FLOOR` | A bootable Component declares CPU or memory below its kind floor. | Raise `resources.memory` to the kind floor (Compute/Service 512Mi, Browser/Desktop 4Gi) or omit it to take the floor. |
 | `ENVIRONMENT_REFERENCE_UNRESOLVED` | A reference in the manifest names something that does not exist. |  |
 | `ENVIRONMENT_REFERENCE_MUTABLE` | A reference is a mutable tag rather than a pinned digest. | Pin the reference to a digest, or run plan with resolution enabled and commit the resolved manifest. |
 | `ENVIRONMENT_MODULE_EXPANSION_FAILED` | A Composition Module could not be expanded into the explicit graph. |  |
@@ -254,6 +259,7 @@ Default retryable: true. Typical HTTP: 503, 504.
 | `INFRASTRUCTURE_UNAVAILABLE` | A platform dependency is temporarily unavailable. |  |
 | `HOST_LOST` | The worker hosting this Run was lost. |  |
 | `RUN_CHECKPOINT_FAILED` | A Run checkpoint could not be written or validated. |  |
+| `RUN_INFRASTRUCTURE` | The host or guest infrastructure failed while the Run was executing. | Mark the Run terminal, then start again on the same Branch. If it repeats, run fystash diagnose and fystash error explain RUN_INFRASTRUCTURE. |
 | `RUN_MEMORY_RESUME_FAILED` | Memory-resume was attempted and could not restore preserved process state. |  |
 | `STATE_COMMIT_UNACKNOWLEDGED` | A State adapter did not durably acknowledge its generation. |  |
 | `EVIDENCE_UNACKNOWLEDGED` | Required Evidence could not be durably recorded. |  |
@@ -296,4 +302,4 @@ Default retryable: false. Typical HTTP: 502, 504.
 | `EXTERNAL_WRITE_UNCERTAIN` | A provider write may or may not have taken effect. | Establish the provider-side outcome before repeating. Do not retry automatically. |
 | `MODEL_FALLBACK_EXHAUSTED` | The primary target and every declared fallback target failed. |  |
 
-Total codes: 177.
+Total codes: 178.

@@ -2,14 +2,14 @@
 name: fystash-integrations
 description: >-
   Configures Fystash ToolGateway, ModelGateway, managed Data, mock/record/replay/live
-  connector modes, and brokered credentials. Use when an Environment needs outbound
+  connector modes, and brokered credentials. Use when a Sandbox needs outbound
   tools, model routes, Database/ObjectStore/Queue, external connectors, or when
   credentials must stay out of Compute.
 ---
 
 # Fystash integrations
 
-Integrations are Environment Components and Bindings, not guest SDK plugins.
+Integrations are Sandbox Components and Bindings, not guest SDK plugins.
 
 Rules:
 

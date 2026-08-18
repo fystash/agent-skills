@@ -1,6 +1,6 @@
 # Actors and coordination
 
-Actors are declared on the Environment and projected onto the Run.
+Actors are declared on the Sandbox and projected onto the Run.
 
 - `kind: Agent` for the workload actor. Give it the minimum capabilities (`workspace.exec`, `workspace.files.read`, …).
 - Human actors are distinct. Do not collapse them into the agent identity.

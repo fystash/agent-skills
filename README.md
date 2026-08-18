@@ -1,6 +1,6 @@
 # Fystash Agent Skills
 
-Canonical public Skills for [Fystash](https://fystash.ai), the agent environment platform.
+Canonical public Skills for [Fystash](https://fystash.ai), the agent-native sandbox platform.
 
 This repository is the **only** public Skills source (`fystash/agent-skills`, Apache-2.0).
 The Go CLI remains the execution surface (`fystash skills install`).
@@ -9,7 +9,7 @@ The Go CLI remains the execution surface (`fystash skills install`).
 
 | Skill | Use when |
 |---|---|
-| [`fystash`](fystash/SKILL.md) | Authoring `environment.yaml`, choosing Components/State, SDK usage, core lifecycle |
+| [`fystash`](fystash/SKILL.md) | Authoring `sandbox.yaml`, choosing Components/State, SDK usage, core lifecycle |
 | [`fystash-cli`](fystash-cli/SKILL.md) | login, connect, compile, Plan/apply, wait, exec, Evidence |
 | [`fystash-debug`](fystash-debug/SKILL.md) | CLI/API/MCP failures, using canonical error codes |
 | [`fystash-integrations`](fystash-integrations/SKILL.md) | ToolGateway, ModelGateway, managed Data, brokered credentials |

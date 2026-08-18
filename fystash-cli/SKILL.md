@@ -2,8 +2,8 @@
 name: fystash-cli
 description: >-
   Operates the canonical Go Fystash CLI for authentication, Project connect,
-  environment compile, Plan/apply, run wait/exec, and Evidence. Use when the
-  user needs fystash login, connect, current, compile, plan, apply, wait, exec,
+  sandbox compile, Plan/apply, sandbox start/exec/evidence/stop, run wait/exec, and Evidence. Use when the
+  user needs fystash login, connect, current, compile, sandbox start, plan, apply, wait, exec,
   evidence, batch, publication, or machine-mode --json behavior.
 ---
 

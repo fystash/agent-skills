@@ -6,7 +6,7 @@ Package `fystash` (`sdks/python`). Generated from the same catalog as TypeScript
 from fystash import client
 
 fy = client("https://api.fystash.ai/v1")
-revision = fy.compile_environment(manifest=yaml_text)
+revision = fy.compile_sandbox(manifest=yaml_text)
 ```
 
 Errors are `FystashError` with the catalog envelope (`code`, `retryable`, `correlation_id`, `remediation`). Do not rename those fields.

@@ -30,4 +30,4 @@ fystash run models get --run run_... --component models --json
 fystash run models invoke --run run_... --component models --actor coding-agent --route policy --operation generate --json
 ```
 
-Do not put provider API keys in `environment.yaml` or guest env vars.
+Do not put provider API keys in `sandbox.yaml` or guest env vars.

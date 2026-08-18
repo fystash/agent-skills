@@ -1,7 +1,7 @@
 # Run lifecycle
 
 ```text
-compile Environment → Revision
+compile Sandbox → Revision
 create Branch on that Revision
 run plan → inspect digest, cost, region, approvals
 plan approve (if required)

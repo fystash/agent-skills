@@ -10,7 +10,7 @@ const client = httpClient("https://api.fystash.ai/v1", {
   projectId: process.env.FYSTASH_PROJECT_ID,
 });
 
-const revision = await client.compileEnvironment({
+const revision = await client.compileSandbox({
   manifest: yamlText,
 });
 ```
