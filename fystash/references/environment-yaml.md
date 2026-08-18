@@ -44,6 +44,6 @@ Rules:
 - Name Components and State; Actors hold capabilities on those names (`workspace.exec`).
 - `network.default: deny` unless the workload truly needs egress.
 - Compile through the catalog (`fystash sandbox compile --file sandbox.yaml`). Do not invent a second compiler.
-- `resources.memory` is freeform above the kind floor (ADR-0152): Compute/Service ≥ 512 MiB, Browser/Desktop ≥ 4 GiB. Omit to take the floor (Compute **2 vCPU / 512 MiB**, unadvertised). Advertised aliases (ADR-0155): `resources.shape: small` (1 vCPU / 1 GiB), `medium` (2 / 4 GiB), `large` (4 / 8 GiB). `shape` XOR `cpu`/`memory`. Disk is not part of the alias. A shape the host cannot pack is `RUN_CAPACITY_UNAVAILABLE` (503), not a silent shrink.
+- `resources.memory` is freeform above the kind floor (ADR-0152): Compute/Service ≥ 512 MiB, Browser/Desktop ≥ 4 GiB. Omit to take the floor (Compute **2 vCPU / 512 MiB**, unadvertised). Advertised aliases (ADR-0156): `resources.shape: nano` (1 vCPU / 512 MiB), `micro` (2 / 512 MiB), `small` (2 / 1 GiB), `medium` (2 / 4 GiB), `large` (4 / 8 GiB). `shape` XOR `cpu`/`memory`. Disk is not part of the alias. A shape the host cannot pack is `RUN_CAPACITY_UNAVAILABLE` (503), not a silent shrink.
 
 See the `01-python-workspace` example in `fystash/fystash-sandbox` for a complete accepted manifest.

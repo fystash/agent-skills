@@ -18,4 +18,4 @@ fystash init node
 fystash init go
 ```
 
-Advertised CPU/RAM aliases: `resources.shape: small` (1 vCPU / 1 GiB), `medium` (2 / 4 GiB), `large` (4 / 8 GiB). Omit Compute stays 2 vCPU / 512 MiB (unadvertised). Disk is not part of the alias.
+Advertised CPU/RAM aliases: `resources.shape: nano` (1 vCPU / 512 MiB), `micro` (2 / 512 MiB), `small` (2 / 1 GiB), `medium` (2 / 4 GiB), `large` (4 / 8 GiB). Omit Compute stays 2 vCPU / 512 MiB (unadvertised; same envelope as `micro`). Disk is not part of the alias.

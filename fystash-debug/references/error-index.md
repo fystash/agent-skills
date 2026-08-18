@@ -26,7 +26,7 @@ Default retryable: false. Typical HTTP: 400, 410, 422.
 | `SANDBOX_REFERENCE_MUTABLE` | A reference is a mutable tag rather than a pinned digest. |  |
 | `SANDBOX_MODULE_EXPANSION_FAILED` | A Composition Module could not be expanded into the explicit graph. |  |
 | `ENVIRONMENT_TOPOLOGY_INVALID` | The Environment graph is not a valid topology: a dependency cycle, an unreachable Component or a missing private endpoint. |  |
-| `COMPONENT_RESOURCES_BELOW_FLOOR` | A bootable Component declares CPU or memory below its kind floor. | Raise `resources.memory` to the kind floor (Compute/Service 512Mi, Browser/Desktop 4Gi), omit it to take the floor, or use `resources.shape: medium` (4 GiB). Browser `shape: small` is below floor. |
+| `COMPONENT_RESOURCES_BELOW_FLOOR` | A bootable Component declares CPU or memory below its kind floor. | Raise `resources.memory` to the kind floor (Compute/Service 512Mi, Browser/Desktop 4Gi), omit it to take the floor, or use `resources.shape: medium` (4 GiB). Browser `shape: nano` / `micro` / `small` are below floor. |
 | `ENVIRONMENT_REFERENCE_UNRESOLVED` | A reference in the manifest names something that does not exist. |  |
 | `ENVIRONMENT_REFERENCE_MUTABLE` | A reference is a mutable tag rather than a pinned digest. | Pin the reference to a digest, or run plan with resolution enabled and commit the resolved manifest. |
 | `ENVIRONMENT_MODULE_EXPANSION_FAILED` | A Composition Module could not be expanded into the explicit graph. |  |
