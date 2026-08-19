@@ -1,5 +1,7 @@
 # Auth, connect, current
 
+Create an account at https://fystash.ai/signup if you do not have one, then:
+
 ```bash
 fystash login
 fystash whoami --json
@@ -7,6 +9,8 @@ fystash connect --project prj_...
 fystash current
 fystash logout
 ```
+
+`fystash login` opens a device code. New users sign up first; returning users sign in, then authorize the CLI.
 
 Headless:
 

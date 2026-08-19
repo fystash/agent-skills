@@ -13,11 +13,12 @@ Canonical binary: Go `fystash`. `npx -y @fystash/cli` only launches that binary.
 
 Rules:
 
-1. Run `fystash current` before material operations if context is uncertain.
-2. Use `--json` (or non-TTY stdout) when a script or agent will parse output.
-3. Do not bypass Plan. Apply the digest you just showed.
-4. Do not guess Project. Use `connect` / `--project` / `.fystash/project.json`.
-5. Never use private operator endpoints. API base is `https://api.fystash.ai/v1`.
+1. Create an account at https://fystash.ai/signup if the user does not have one, then `fystash login`.
+2. Run `fystash current` before material operations if context is uncertain.
+3. Use `--json` (or non-TTY stdout) when a script or agent will parse output.
+4. Do not bypass Plan. Apply the digest you just showed.
+5. Do not guess Project. Use `connect` / `--project` / `.fystash/project.json`.
+6. Never use private operator endpoints. API base is `https://api.fystash.ai/v1`.
 
 Exit codes: `0` success, `1` operation/runtime failure, `2` usage.
 
