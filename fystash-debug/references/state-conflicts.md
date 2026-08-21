@@ -10,6 +10,6 @@ State is Branch-owned with a Run-private overlay.
 | `STATE_BINDING_INVALID` | Mount/binding does not match declared State. |
 | `STATE_ISOLATION_REQUIRED` / `STATE_CUTOVER_REQUIRED` | Overlay/isolation rules blocked the operation. |
 
-Writes stay on the overlay until `fystash branch commit`. `onRunEnd: discard` drops the overlay when the Run ends.
+Writes stay on the overlay until `onRunEnd: commit` or `fystash branch commit --participants <state-name>`. `onRunEnd: discard` drops the overlay when the Run ends. `onRunEnd: commit` is catalog-valid and is the honest choice when a file must survive stop.
 
 Do not store secrets in Evidence. Do not treat Evidence as a State dump.

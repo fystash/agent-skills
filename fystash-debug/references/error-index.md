@@ -117,6 +117,7 @@ Default retryable: false. Typical HTTP: 403, 428.
 | `RUN_RESUME_FALLBACK_DENIED` | The preferred resume class was unavailable and fallback was not allowed. |  |
 | `PREVIEW_GRANT_EXPIRED` | The Preview Access Grant has expired or been revoked. |  |
 | `PREVIEW_GRANT_FORBIDDEN` | The preview route would expose a forbidden control or data endpoint. |  |
+| `NETWORK_EGRESS_DENIED` | The Run's network policy denied external egress. Guest curl(6) / resolver failure under `network.default: deny` is this code. | Keep deny-by-default. Use a Gateway, seed the Drive, or allowlist origins with `directEgress`. |
 | `BROWSER_ORIGIN_DENIED` | The navigation target is outside the Browser's allowed origin/egress policy. |  |
 | `BROWSER_CAPABILITY_DENIED` | The Actor lacks the capability this Browser action requires. |  |
 | `BROWSER_PROFILE_PROMOTION_DENIED` | Browser Profile promotion is refused by policy or missing capability. |  |
